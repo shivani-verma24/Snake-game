@@ -32,7 +32,7 @@ class Snake:
         for i in range(len(self.segments)-1, 0, -1):
             new_x = self.segments[i-1].xcor()
             new_y = self.segments[i-1].ycor()
-            self.segments[i].goto(new_x, new_y) #last segmant moves to the position of 2nd last & so on.
+            self.segments[i].goto(new_x, new_y) 
         self.head.forward(20)
 
     def up(self):
@@ -52,7 +52,7 @@ class Snake:
 
     def reset(self):
         for seg in self.segments:
-            seg.goto(1000, 1000)    #to make previous snake disappear
+            seg.goto(1000, 1000)   
         self.segments.clear()
         self.create_snake()
         self.head = self.segments[0]
